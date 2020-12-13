@@ -1,38 +1,139 @@
 .App {
+  padding:20px;
+}
+
+.App h1 {
   text-align: center;
+  font-size: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pokemons {
+  display:flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content:space-around;
+  margin: 0 auto;
 }
+.pokemons::after {
+  content: "";
+  display:block;
+  width: 300px
+}  
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokemon-card {
+  text-align: center;
+  border-radius: 8px;
+  border:1px solid black;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-transform: capitalize;
+  margin:10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.pokemon-card .img-container {
+  width:150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background:white;
+
+}
+.pokemon-card .img-container img{ 
+  text-align: center;
+  width:100%;
+  object-fit:cover;
+}
+.pokemon-info  > * {
+  margin: 10px 0;
+}
+.pokemon-info  h2 {
+  font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokemon-info  p{
+font-size: 17px;
 }
+
+.number {
+  background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+}
+
+.fire {
+  background:#FDDFDF;
+  border-color:#FDDFDF
+   }
+	.grass {
+    background:#DEFDE0;
+    border-color:#DEFDE0
+
+  }
+	.electric {
+    background:#FCF7DE;
+    border-color:#FCF7DE;
+  }
+	.water {
+    background:#DEF3FD;
+    border-color:#DEF3FD;
+  }
+	.ground {
+    background:#f4e7da;
+    border-color:#f4e7da;
+  }
+	.rock {
+    background: #d5d5d4;
+    border-color:#d5d5d4;
+  }
+	.fairy {
+    background:#fceaff;
+    border-color:#fceaff;
+  }
+  .poison {
+  background: #98d7a5;
+  border-color:#98d7a5;
+  }
+	.bug {
+    background:#f8d5a3;
+    border-color:#f8d5a3;
+
+  }
+	.dragon {
+    background: #97b3e6;
+    border-color:#97b3e6;
+
+  }
+	.psychic {
+    background:#eaeda1;
+    border-color:#eaeda1;
+
+  }
+	.flying {
+    background:#F5F5F5;
+    border-color:#F5F5F5;
+
+  }
+	.fighting{
+    background:#E6E0D4;
+    border-color:#E6E0D4;
+
+
+  }
+	.normal {
+    background:#F5F5F5;
+    border-color:#F5F5F5;
+
+  }
+
+  @media all and (min-width: 1000px) {
+    .pokemons {
+   
+      justify-content:space-between;
+   
+    }
+  }
