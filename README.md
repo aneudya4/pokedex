@@ -18,9 +18,12 @@
 
 ## Description
 
+
+
+<h2 align="center">Pokedex is ReactJs app in which i use the pokeapi to get all the data.</h2>
 <p align="center">
 <img src="./readme_assets/landing.png" width="80%"></p>
-Pokedex is ReactJs app in which i use the pokeapi to get all the data.
+
 
 
 ### Project setup:
