@@ -5,7 +5,6 @@ const PokemonComponent = React.lazy(()=> import('./pokemonCard'))
 
 function App() {
   const [pkms, setpkms]= useState([])
-  // const [allTypes, setAllTypes]= useState([])
 
   useEffect(  () => {
     const fetchPkm =  async () => {
@@ -16,12 +15,7 @@ function App() {
       fetchPkm()
         }, [])
 
-  // useEffect(() => {
-  //   fetch('https://pokeapi.co/api/v2/type/').then(data=>{
-  //     return data.json()
-  //   }).then(types=>setAllTypes(types.results))
-  // }, [])
-
+ 
   return (
     <div className="App">
       <h1>Pokedex</h1>
