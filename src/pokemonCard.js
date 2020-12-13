@@ -18,7 +18,7 @@ const PokemonCard = ({name,url}) => {
     const pkmType = pkmData.types  ? pkmData.types[0].type.name : 'normal'
     return <div className={`pokemon-card ${pkmType}`}>
         <div className='img-container'>
-            <img src={pkmImg} alt={name}/>
+            <img width='150' src={pkmImg} alt={name}/>
         </div>
         <div className='pokemon-info'>
             <h2 className='name'>{name}</h2>
