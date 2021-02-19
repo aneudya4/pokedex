@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const PokemonCard = ({ name, url }) => {
+const PokemonCard = ({ name }) => {
   const [pkmData, setPkmData] = useState([]);
   useEffect(() => {
     const fetchPkmData = async () => {

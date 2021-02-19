@@ -6,7 +6,24 @@
   text-align: center;
   font-size: 40px;
 }
+form {
+  text-align: center;
+}
 
+form input {
+  width: 150px;
+  padding: 5px;
+}
+
+form button {
+  padding: 7px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border: 0;
+  background-color: rgba(54, 90, 190, 0.801);
+  color: white;
+}
 .pokemons {
   display: flex;
   flex-wrap: wrap;
