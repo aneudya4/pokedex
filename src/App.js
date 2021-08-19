@@ -5,6 +5,8 @@ const PokemonComponent = React.lazy(() => import('./pokemonCard'));
 
 function App() {
   const [pkms, setpkms] = useState([]);
+  const [showShiny, setShowShiny] = useState(false);
+
   const [pkmsNumbers, setpkmsNumbers] = useState(1);
 
   const fetchPkm = useCallback(async (value) => {
@@ -27,7 +29,16 @@ function App() {
   return (
     <div className='App'>
       <h1>Pokedex</h1>
+      <div className='checkbox'>
+        <input id='checkbox_shiny' type='checkbox' value='showShiny' onChange={() => setShowShiny(!showShiny)} />
+        <label for='checkbox_shiny'>
+          Shiny variant
+        </label>
+      </div>
       <form onSubmit={onSubmit}>
+
+
+
         <label>
           <input
             type='number'
@@ -38,11 +49,12 @@ function App() {
           />
         </label>
         <button>Search</button>
+
       </form>
       <div className='pokemons'>
         <Suspense fallback={<div>...Loading</div>}>
           {pkms.map((pkm) => {
-            return <PokemonComponent key={pkm.name} {...pkm} />;
+            return <PokemonComponent key={pkm.name} {...pkm} showShiny={showShiny} />;
           })}
         </Suspense>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const PokemonCard = ({ name }) => {
+const PokemonCard = ({ name, showShiny }) => {
   const [pkmData, setPkmData] = useState([]);
   useEffect(() => {
     const fetchPkmData = async () => {
@@ -11,8 +11,9 @@ const PokemonCard = ({ name }) => {
     fetchPkmData();
   }, [name]);
 
+
   const pkmImg = pkmData.id
-    ? `https://pokeres.bastionbot.org/images/pokemon/${pkmData.id}.png`
+    ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${!showShiny ? '' : 'shiny/'}${pkmData.id}.png`
     : null;
   const pkmType = pkmData.types ? pkmData.types[0].type.name : 'normal';
   return (

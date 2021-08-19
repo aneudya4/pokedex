@@ -34,7 +34,7 @@ form button {
 .pokemons::after {
   content: '';
   display: block;
-  width: 300px;
+  width: 320px;
 }
 
 .pokemon-card {
@@ -137,8 +137,23 @@ form button {
   border-color: #f5f5f5;
 }
 
+.ice {
+  
+  background: #aad4e5;
+  border-color: #aad4e5;
+}
+
 @media all and (min-width: 1000px) {
   .pokemons {
     justify-content: space-between;
   }
+}
+
+
+.checkbox {
+  width:150px;
+  margin:10px auto;
+}
+.checkbox label {
+  margin-left:10px;
 }
